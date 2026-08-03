@@ -5,10 +5,45 @@
     <script src="popup.js"></script>
 </head>
 
+
 <body>
-    <h1>Find my Way</h1>
-    <p>Find the most optimal routes to reach your destinations</p>
-    <input type="number" id="numberDestinations" placeholder="Enter number of destinations" min="3" max="20">
-    <button id="findRouteButton">Find Route</button>
+    <div class="icon">
+        <img src="../icons/icon48.png">
+    </div>
+
+    <div class="header">
+        <h1>Find my Way</h1>
+        <p>Find the most optimal routes to reach your destinations</p>
+    </div>
+
+    <div class="instructions">
+        <p>1. Go to <b>Google Maps</b>, and enter all your destinations in any order</p>
+        <p>2. Check off the boxes that apply</p>
+        <div class='checkboxes'>
+
+            <!-- fixedStartCheckbox -->
+            <label class="checkbox-label">
+                <input type="checkbox" id="fixedStart"/>
+                <span>Fixed starting destination</span>
+            </label>
+
+            <!-- fixedEndCheckbox -->
+            <label class="checkbox-label">
+                <input type="checkbox" id="fixedEnd"/>
+                <span>Fixed ending destination</span>
+            </label>
+
+        </div>
+        
+        <div class="destination-input">
+            <p>3. Enter the total number of destinations you entered on Google Maps</p>
+            <input type="number" id="numberDestinations" placeholder="Enter number of destinations" min="3" max="20">
+        </div>
+
+    </div>
+
+    <div class="findButton">
+        <button id="findRouteButton">Find Route</button>
+    </div>
 
 </body>
