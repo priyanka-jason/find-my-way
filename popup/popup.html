@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find my Way</title>
     <link rel="stylesheet" href="popup.css">
     <script src="popup.js"></script>
 </head>
-
-
 <body>
-    <div class="icon">
-        <img src="../icons/icon48.png">
+    <div class="icon" aria-hidden="true">
+        <img src="../icons/icon48.png" alt="Find my Way icon">
     </div>
 
     <div class="header">
@@ -16,34 +17,32 @@
         <p>Find the most optimal routes to reach your destinations</p>
     </div>
 
-    <div class="instructions">
-        <p>1. Go to <b>Google Maps</b>, and enter all your destinations in any order</p>
-        <p>2. Check off the boxes that apply</p>
-        <div class='checkboxes'>
+    <form id="routeForm" class="instructions">
+        <p>1. Open <strong>Google Maps</strong> and enter your destinations in any order.</p>
+        <p>2. Choose the options that match your trip.</p>
 
-            <!-- fixedStartCheckbox -->
-            <label class="checkbox-label">
-                <input type="checkbox" id="fixedStart"/>
+        <div class="checkboxes">
+            <label class="checkbox-label" for="fixedStart">
+                <input type="checkbox" id="fixedStart">
                 <span>Fixed starting destination</span>
             </label>
 
-            <!-- fixedEndCheckbox -->
-            <label class="checkbox-label">
-                <input type="checkbox" id="fixedEnd"/>
+            <label class="checkbox-label" for="fixedEnd">
+                <input type="checkbox" id="fixedEnd">
                 <span>Fixed ending destination</span>
             </label>
-
         </div>
-        
+
         <div class="destination-input">
-            <p>3. Enter the total number of destinations you entered on Google Maps</p>
-            <input type="number" id="numberDestinations" placeholder="Enter number of destinations" min="3" max="20">
+            <label for="numberDestinations">3. Enter the total number of destinations</label>
+            <input type="number" id="numberDestinations" placeholder="3-20" min="3" max="20" required>
         </div>
 
-    </div>
+        <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
 
-    <div class="findButton">
-        <button id="findRouteButton">Find Route</button>
-    </div>
-
+        <div class="findButton">
+            <button id="findRouteButton" type="submit">Find Route</button>
+        </div>
+    </form>
 </body>
+</html>

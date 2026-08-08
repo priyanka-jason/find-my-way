@@ -1,46 +1,87 @@
 body {
-    aspect-ratio: 1/1;
+    margin: 0;
+    padding: 16px;
     min-width: 300px;
-    /* justify-content: center; */
-    padding: 15px;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+}
 
-    .icon {
-        display: flex;
-        justify-content: center;
-    }
+.icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
-    .header {
-        text-align: center;
-    }
+.header {
+    text-align: center;
+    margin-bottom: 12px;
+}
 
-    h1 {
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+h1 {
+    font-size: 20px;
+    margin: 0 0 6px;
+}
 
-    .instructions {
-        padding: 10px;
-        text-align: left;
-        /* flex-direction: column; */
-    }
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .checkboxes {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 4px;
+}
 
-    .destination-input {
-        flex-direction: row;
-        display: inline-flex;
-    }
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
 
-    .findButton {
-        background-color: clear;
-        display: flex;
-        justify-content: center;
-    }
+.destination-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.status-message {
+    min-height: 20px;
+    margin: 0;
+    font-size: 13px;
+    color: #475569;
+}
+
+.status-message.is-error {
+    color: #b91c1c;
+}
+
+.findButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 9px 14px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #1d4ed8;
 }

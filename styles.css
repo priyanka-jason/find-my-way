@@ -1,0 +1,29 @@
+.find-my-way-overlay {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 2147483647;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 220px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.95);
+    color: #f8fafc;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.find-my-way-overlay.is-visible {
+    display: flex;
+}
+
+.find-my-way-overlay__title {
+    font-weight: 700;
+}
+
+.find-my-way-overlay__message {
+    opacity: 0.95;
+}
